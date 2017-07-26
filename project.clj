@@ -1,7 +1,11 @@
 (defproject fantastic-voyage "0.1.0-SNAPSHOT"
   :license {:name "The MIT License"
             :url "https://opensource.org/licenses/MIT"}
-  :clean-targets ^{:protect false} [:target-path "out" "resources/public/js"]
+  :clean-targets ^{:protect false} [:target-path "out"
+                                    "resources/public/js"
+                                    "../myapp/public/js/"
+                                    "../myapp/app/javascript/packs/main.js"
+                                    "../myapp/app/assets/javascripts/main.js"]
   :repl-options {:init-ns dev.repl}
   :min-lein-version "2.5.3"
   :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
@@ -20,8 +24,8 @@
                                          :compiler {:main "fantastic_voyage.core"
                                                     :preloads [devtools.preload]
                                                     :asset-path "js/out"
-                                                    :output-to "resources/public/js/main.js"
-                                                    :output-dir "resources/public/js/out"
+                                                    :output-to "../myapp/app/javascript/packs/main.js"
+                                                    :output-dir "../myapp/public/js/out"
                                                     :optimizations :none
                                                     :recompile-dependents true
                                                     :source-map true}}]}}})

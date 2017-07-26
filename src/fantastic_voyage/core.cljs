@@ -2,6 +2,8 @@
   (:require [reagent.core :as r]
             [goog.dom]))
 
+(js/console.log "Hello from cljs, yo")
+
 (def by-id goog.dom.getElement)
 
 (defn app-container []
